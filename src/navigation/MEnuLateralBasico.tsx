@@ -5,6 +5,7 @@ import StackNavigator from './StackNavigator';
 import SettingsScreen from '../screens/SettingsScreen';
 import { useWindowDimensions } from 'react-native';
 import { styles } from '../theme/AppTheme';
+import Tabs from './Tabs';
 
 const Drawer = createDrawerNavigator();
 
@@ -17,7 +18,7 @@ export default function MEnuLateralBasico() {
           drawerType={ width > 700? 'permanent' : 'front' }
           drawerContent = {(props) => <MenuInterno {...props} />}
         >
-          <Drawer.Screen name="StackNavigator" options={{title:"Home"}} component={StackNavigator} />
+          <Drawer.Screen name="Tabs" options={{title:"Tabs"}} component={Tabs} />
           <Drawer.Screen name="SettingsScreen" options={{title:"Settings"}} component={SettingsScreen} />
         </Drawer.Navigator>
       );
