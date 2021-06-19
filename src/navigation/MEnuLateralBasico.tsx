@@ -41,7 +41,7 @@ return (
     <View style={styles.menuOptionsContainer}>
       <TouchableOpacity
         style={styles.menuOption}
-        onPress={()=> navigation.navigate('StackNavigator')}
+        onPress={()=> navigation.navigate('Tabs')}
       >
         <Text style={styles.menuOptionText}>Home</Text>
       </TouchableOpacity>
