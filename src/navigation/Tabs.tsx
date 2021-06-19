@@ -65,6 +65,8 @@ function TabsIOS() {
         style: {
           borderTopColor: colores.primary,
           borderTopWidth: 0,
+          shadowColor: 'transparent',
+          elevation: 0,
         },
         // activeBackgroundColor: '#053b74',
       }}
