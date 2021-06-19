@@ -8,6 +8,10 @@ export const styles = StyleSheet.create({
     globalMarging: {
         margin: 20,
     },
+    title:{
+        fontSize: 30,
+        fontWeight: 'bold',
+    },
     globalButton: {
         justifyContent: 'center',
         alignItems: 'center',
