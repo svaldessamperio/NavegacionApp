@@ -37,6 +37,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = NavegacionApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = NavegacionApp/main.m; sourceTree = "<group>"; };
 		3BA49E1D63A65D422E3DA732 /* libPods-NavegacionApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NavegacionApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49FF0633267E1DDB0032D135 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		772BF6305C3D987B291C34B7 /* Pods-NavegacionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavegacionApp.debug.xcconfig"; path = "Target Support Files/Pods-NavegacionApp/Pods-NavegacionApp.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = NavegacionApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6FE934452B64268D7BDA1F2 /* libPods-NavegacionApp-NavegacionAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NavegacionApp-NavegacionAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +107,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		49FF0632267E1D900032D135 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				49FF0633267E1DDB0032D135 /* Ionicons.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +125,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				49FF0632267E1D900032D135 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* NavegacionApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* NavegacionAppTests */,
@@ -145,7 +155,6 @@
 				E208D591FCCFD0245F3D8DB1 /* Pods-NavegacionApp-NavegacionAppTests.debug.xcconfig */,
 				D1D65B1B60FB24F4D4B80D4B /* Pods-NavegacionApp-NavegacionAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
