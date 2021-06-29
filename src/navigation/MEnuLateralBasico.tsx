@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { createDrawerNavigator, DrawerContentComponentProps, DrawerContentOptions, DrawerContentScrollView } from '@react-navigation/drawer';
+import Icon from 'react-native-vector-icons/Ionicons';
 import StackNavigator from './StackNavigator';
 import SettingsScreen from '../screens/SettingsScreen';
 import { useWindowDimensions } from 'react-native';
 import { styles } from '../theme/AppTheme';
 import Tabs from './Tabs';
+
 
 const Drawer = createDrawerNavigator();
 
@@ -43,14 +45,19 @@ return (
         style={styles.menuOption}
         onPress={()=> navigation.navigate('Tabs')}
       >
-        <Text style={styles.menuOptionText}>Home</Text>
+        
+        <Text style={styles.menuOptionText}>
+          <Icon name='home-outline' size={30} color='blue'/> Home
+        </Text>
       </TouchableOpacity>
 
       <TouchableOpacity
         style={styles.menuOption}
         onPress={()=> navigation.navigate('SettingsScreen')}
       >
-        <Text style={styles.menuOptionText}>Settings</Text>
+        <Text style={styles.menuOptionText}>
+          <Icon name='cog-outline' size={30} color='blue'/> Settings 
+        </Text>
       </TouchableOpacity>
     </View>
   </DrawerContentScrollView>

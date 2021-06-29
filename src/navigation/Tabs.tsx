@@ -1,9 +1,9 @@
 import React from 'react';
-import { Platform, Text } from 'react-native';
+import { Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Tab1Screen from '../screens/Tab1Screen';
-import Tab2Screen from '../screens/Tab2Screen';
 import StackNavigator from './StackNavigator';
+import Icon from 'react-native-vector-icons/Ionicons'
 import { colores } from '../theme/AppTheme';
 
 export default function Tabs() {
@@ -27,24 +27,24 @@ function TabsAndroid() {
             let iconName:string = '';
             switch (route.name) {
               case 'Tab1Screen':
-                iconName='T1'
+                iconName='american-football-outline'
                 break;
-              case 'Tab2Screen':
-                  iconName='T2'
+              case 'TopTapNavigator':
+                  iconName='basketball-outline'
                   break;
               case 'StackNavigator':
-                iconName='St'
+                iconName='baseball-outline'
                 break;
               default:
                 break;
               }
-              return <Text>{iconName}</Text>
+              return <Icon name={iconName} size={20} color={color}/>
           },
         })
       }
     >
       <TabiOS.Screen name="Tab1Screen" options={{title: "Tab Uno"}} component={Tab1Screen}/>
-      <TabiOS.Screen name="TopTapNavigator" options={{title: "TopTapNavigator"}} component={TopTapNavigator} />
+      <TabiOS.Screen name="TopTapNavigator" options={{title: "TapNavigator"}} component={TopTapNavigator} />
       <TabiOS.Screen name="StackNavigator" options={{title: "Tab Tres"}} component={StackNavigator} />
     </TabAndroid.Navigator>
   );
@@ -76,18 +76,18 @@ function TabsIOS() {
             let iconName:string = '';
             switch (route.name) {
               case 'Tab1Screen':
-                iconName='T1'
+                iconName='american-football-outline'
                 break;
-              case 'Tab2Screen':
-                  iconName='T2'
+              case 'TopTapNavigator':
+                  iconName='basketball-outline'
                   break;
               case 'StackNavigator':
-                iconName='St'
+                iconName='baseball-outline'
                 break;
               default:
                 break;
               }
-              return <Text>{iconName}</Text>
+              return <Icon name={iconName} size={20} color={color}/>
           },
         })
       }    

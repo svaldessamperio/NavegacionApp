@@ -1,11 +1,12 @@
 import React from 'react'
-import { Text } from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import ChatsScreen from '../screens/ChatsScreen';
 import ContactsScreen from '../screens/ContactsScreen';
 import AlbumsScreen from '../screens/AlbumsScreen';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colores } from '../theme/AppTheme';
+
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -21,6 +22,10 @@ export default function TopTapNavigator() {
           }}
           tabBarOptions={{
             pressColor: colores.primary,
+            showIcon: true,
+            indicatorStyle: { 
+              backgroundColor: colores.primary
+            },
             style: {
               borderTopColor: colores.primary,
               borderTopWidth: 0,
@@ -34,21 +39,22 @@ export default function TopTapNavigator() {
                 let iconName:string = '';
                 switch (route.name) {
                   case 'Chats':
-                    iconName='CH'
+                    iconName='football-outline'
                     break;
                   case 'Contacts':
-                      iconName='CO'
+                      iconName='american-football-outline'
                       break;
                   case 'Albums':
-                    iconName='AL'
+                    iconName='battery-full-outline'
                     break;
                   default:
                     break;
                   }
-                  return <Text>{iconName}</Text>
+                  return <Icon name={iconName} size={20} color={color}/> 
               },
             })
           }
+
         >
           <Tab.Screen name="Chats" component={ChatsScreen} />
           <Tab.Screen name="Contacts" component={ContactsScreen} />
