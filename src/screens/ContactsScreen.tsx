@@ -4,15 +4,17 @@ import { AuthContext } from '../context/AuthContext';
 
 export default function ContactsScreen() {
 
-    const { signIn } = useContext(AuthContext);
+    const { authState, signIn } = useContext(AuthContext);
 
     return (
         <View>
             <Text>Contacts</Text>
-            <Button 
-                title='SignIn'
-                onPress={ signIn }
-            />
+            { !authState.isLogIn &&
+                <Button 
+                    title='SignIn'
+                    onPress={ signIn }
+                />
+            }
         </View>
     )
 }
